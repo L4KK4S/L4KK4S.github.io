@@ -1,55 +1,84 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Tableau de données</title>
-	<style>
-		table {
-			border-collapse: collapse;
-			width: 100%;
-		}
-
-		th, td {
-			text-align: left;
-			padding: 8px;
-			border: 1px solid #ddd;
-		}
-
-		th {
-			background-color: #ddd;
-			font-weight: bold;
-		}
-
-		tr:nth-child(even) {
-			background-color: #f2f2f2;
-		}
-	</style>
+	<title>Abdel-Waheb</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-	<table>
-		<thead>
-			<tr>
-				<th class="to_get">Name</th>
-				<th class="to_get">Time</th>
-				<th class="to_get">Date</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr>
-				<td class="to_get">Alice</td>
-				<td class="to_get">25:05</td>
-				<td class="to_get">2021-05-01</td>
-			</tr>
-			<tr>
-				<td class="to_get">Bob</td>
-				<td class="to_get">22:20</td>
-				<td class="to_get">2021-05-02</td>
-			</tr>
-			<tr>
-				<td class="to_get">Charlie</td>
-				<td class="to_get">2:28</td>
-				<td class="to_get">2021-05-03</td>
-			</tr>
-		</tbody>
-	</table>
+    
+    <!-- First Secction : Welcome-->
+    <section id="welcome">
+
+        <div class="circle-container" id="first-circle"></div>
+        <div class="circle-container" id="second-circle"></div>
+        <div class="circle-container" id="third-circle"></div>
+
+        <div id="welcome-text">
+            <h1>Welcome</h1>
+            <h2>to my <span class="blue-word">website</span></h2>
+        </div>
+
+    </section>
+
+
+
+    <!-- Second Section: about me-->
+    <section id="about-me">
+
+        <div class="center-div">
+            <div class="horizontal-div">
+                <img src="data/img/portrait.png" alt="display error" id="portrait-img">
+                <div class="vertical-div">
+
+                    <div id="about-me-skills" class="about-me-div">
+
+                        <div class="square">
+                            <img src="data/img/skill_1.png" alt="">
+                        </div>
+
+                        <div class="square">
+                            <img src="data/img/skill_2.png" alt="">
+                        </div>
+
+                        <div class="square">
+                            <img src="data/img/skill_3.png" alt="">
+                        </div>
+
+                    </div>
+
+                    <div id="about-me-presentation" class="about-me-div">
+                        <p>
+                           My name is <span class="blue-word">Abdel-Waheb</span>,
+                            I am a student in preparatory class in computer science <span class="blue-word">engineering</span> school.
+                            I am passionate about this field and you can find here all my <span class="blue-word">projects</span>.
+                        </p>
+                    </div>
+                        
+                    <div id="about-me-cv" class="about-me-div">
+                        
+                        <button>
+                             <p>Download &nbsp</p>
+                            <img src="data/icons/download_icon.png" alt="display error">
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+      </section>
+
+
+
+    <!-- Nav bar-->
+    <nav>
+        <ul>
+          <li><a href="#about-me">About me</a></li>
+          <li><a href="#">Projects</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <script src="script.js"></script>
 </body>
 </html>
