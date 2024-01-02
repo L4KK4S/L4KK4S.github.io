@@ -1,12 +1,15 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
+
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Abdel-Waheb</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    
+
     <!-- Première Section : Bienvenue -->
     <section id="welcome">
 
@@ -21,9 +24,7 @@
 
     </section>
 
-
-
-    <!-- Deuxième Section : À propos-->
+    <!-- Deuxième Section : À propos -->
     <section id="about-me">
 
         <div class="center-div">
@@ -50,15 +51,16 @@
                     <div id="about-me-presentation" class="about-me-div">
                         <p>
                             Je m'appelle <span class="blue-word">Abdel-Waheb</span>,
-                            je suis étudiant en classe préparatoire dans une école d'ingénieurs en <span class="blue-word">informatique</span>.
-                            Je suis passionné par ce domaine et vous pouvez trouver ici tous mes <span class="blue-word">projets</span>.
+                            je suis étudiant en classe préparatoire dans une école d'ingénieurs en
+                            <span class="blue-word">informatique</span>. Je suis passionné par ce domaine et vous
+                            pouvez trouver ici tous mes <span class="blue-word">projets</span>.
                         </p>
                     </div>
-                        
+
                     <div id="about-me-cv" class="about-me-div">
-                        
+
                         <button>
-                             <p>Télécharger &nbsp</p>
+                            <p>Télécharger &nbsp</p>
                             <img src="data/icons/download_icon.png" alt="erreur d'affichage">
                         </button>
                     </div>
@@ -68,7 +70,6 @@
         </div>
 
     </section>
-
 
     <!-- Troisième Section : Projets -->
     <section id="projects">
@@ -88,16 +89,37 @@
 
     </section>
 
-
     <!-- Barre de navigation -->
     <nav>
         <ul>
-          <li><a href="#about-me">À propos</a></li>
-          <li><a href="#projects">Projets</a></li>
-          <li><a href="#">Contact</a></li>
+            <li><a href="#about-me">À propos</a></li>
+            <li><a href="#projects">Projets</a></li>
+            <li><a href="#">Contact</a></li>
         </ul>
     </nav>
 
-    <script src="script.js"></script>
+    <script>
+        const slider = document.getElementById('image-slider');
+        let currentIndex = 0;
+
+        function showSlide(index) {
+            const slideWidth = document.querySelector('.slide').offsetWidth;
+            const newPosition = -index * slideWidth;
+            slider.style.transform = 'translateX(' + newPosition + 'px)';
+            currentIndex = index;
+        }
+
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % document.querySelectorAll('.slide').length;
+            showSlide(currentIndex);
+        }
+
+        function prevSlide() {
+            currentIndex = (currentIndex - 1 + document.querySelectorAll('.slide').length) % document.querySelectorAll('.slide').length;
+            showSlide(currentIndex);
+        }
+    </script>
+
 </body>
+
 </html>
