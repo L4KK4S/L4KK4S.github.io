@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Abdel-Waheb</title>
+    <title>Abdel-Waheb</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     
-    <!-- First Secction : Welcome-->
+    <!-- Première Section : Bienvenue -->
     <section id="welcome">
 
         <div class="circle-container" id="first-circle"></div>
@@ -14,20 +15,20 @@
         <div class="circle-container" id="third-circle"></div>
 
         <div id="welcome-text">
-            <h1>Welcome</h1>
-            <h2>to my <span class="blue-word">website</span></h2>
+            <h1>Bienvenue</h1>
+            <h2>sur mon <span class="blue-word">site web</span></h2>
         </div>
 
     </section>
 
 
 
-    <!-- Second Section: about me-->
+    <!-- Deuxième Section : À propos-->
     <section id="about-me">
 
         <div class="center-div">
             <div class="horizontal-div">
-                <img src="data/img/portrait.png" alt="display error" id="portrait-img">
+                <img src="data/img/portrait.png" alt="erreur d'affichage" id="portrait-img">
                 <div class="vertical-div">
 
                     <div id="about-me-skills" class="about-me-div">
@@ -48,17 +49,17 @@
 
                     <div id="about-me-presentation" class="about-me-div">
                         <p>
-                           My name is <span class="blue-word">Abdel-Waheb</span>,
-                            I am a student in preparatory class in computer science <span class="blue-word">engineering</span> school.
-                            I am passionate about this field and you can find here all my <span class="blue-word">projects</span>.
+                            Je m'appelle <span class="blue-word">Abdel-Waheb</span>,
+                            je suis étudiant en classe préparatoire dans une école d'ingénieurs en <span class="blue-word">informatique</span>.
+                            Je suis passionné par ce domaine et vous pouvez trouver ici tous mes <span class="blue-word">projets</span>.
                         </p>
                     </div>
                         
                     <div id="about-me-cv" class="about-me-div">
                         
                         <button>
-                             <p>Download &nbsp</p>
-                            <img src="data/icons/download_icon.png" alt="display error">
+                             <p>Télécharger &nbsp</p>
+                            <img src="data/icons/download_icon.png" alt="erreur d'affichage">
                         </button>
                     </div>
 
@@ -66,15 +67,33 @@
             </div>
         </div>
 
-      </section>
+    </section>
 
 
+    <!-- Troisième Section : Projets -->
+    <section id="projects">
 
-    <!-- Nav bar-->
+        <div id="slider-container">
+            <button class="slider-btn" id="prevBtn" onclick="prevSlide()"><</button>
+            <div id="image-slider">
+                <div class="slide"><a href="https://github.com/L4KK4S/Memoria-Quest"><img class="slider-img" src="data/img/MQ_card.png" alt="Erreur image"></a></div>
+                <div class="slide"><a href="https://github.com/L4KK4S/Tetriminux"><img class="slider-img" src="data/img/Tetriminux_card.png" alt="Erreur image"></a></div>
+                <div class="slide"><a href="https://github.com/L4KK4S/AgenC"><img class="slider-img" src="data/img/AgenC_card.png" alt="Erreur image"></a></div>
+                <div class="slide"><a href="https://github.com/L4KK4S/Libet"><img class="slider-img" src="data/img/Libet_card.png" alt="Erreur image"></a></div>
+                <div class="slide"><a href=""><img class="slider-img" src="" alt="Erreur image"></a></div>
+                <div class="slide"><a href=""><img class="slider-img" src="" alt="Erreur image"></a></div>
+            </div>
+            <button class="slider-btn" id="nextBtn" onclick="nextSlide()">></button>
+        </div>
+
+    </section>
+
+
+    <!-- Barre de navigation -->
     <nav>
         <ul>
-          <li><a href="#about-me">About me</a></li>
-          <li><a href="#">Projects</a></li>
+          <li><a href="#about-me">À propos</a></li>
+          <li><a href="#projects">Projets</a></li>
           <li><a href="#">Contact</a></li>
         </ul>
     </nav>
