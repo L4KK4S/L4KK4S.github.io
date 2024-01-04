@@ -174,7 +174,7 @@ nav ul li a {
     height: 15%;
 }
 
-#about-me-cv button{
+#about-me-cv a{
     display: flex;
     justify-content: center;
     margin-right: auto;
@@ -186,6 +186,7 @@ nav ul li a {
     min-width: 150px;
     max-width: 200px;
     min-height: 60px;
+    text-decoration: none;
 }
 
 #about-me-cv img{
@@ -245,26 +246,26 @@ nav ul li a {
     position: relative;
     text-align: center; 
     flex-direction: column;
-  }
+}
 
-  #image-slider {
+#image-slider {
     display: flex;
     transition: transform 0.5s ease-in-out;
-  }
+}
 
-  .slide {
+.slide {
     width: 100%;
     flex: 0 0 auto;
     display: flex;
     justify-content: center; 
     align-items: center;
-  }
+}
 
-  .slider-img {
+.slider-img {
     max-width: 90%; 
-  }
+}
 
-  .slider-btn {
+.slider-btn {
     cursor: pointer;
     font-size: 18px;
     position: absolute;
@@ -272,12 +273,12 @@ nav ul li a {
     transform: translateY(-50%);
     background: none;
     border: none;
-  }
+}
 
-  #prevBtn {
+#prevBtn {
     left: 10px;
-  }
+}
 
-  #nextBtn {
+#nextBtn {
     right: 10px;
-  }
+}
