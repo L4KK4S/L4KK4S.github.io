@@ -282,3 +282,88 @@ nav ul li a {
 #nextBtn {
     right: 10px;
 }
+
+/* ############################### */
+/* ##### Section 4 : Contact ##### */
+/* ############################### */
+
+
+#contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#contact a {
+    color: transparent; 
+    background-color: #0582CA; 
+    background-size: cover; 
+    background-position: center; 
+    background-size: 50%; 
+    background-repeat: no-repeat;
+    border-radius: 10%; 
+    text-align: center;
+    text-decoration: none;
+    font-family: fontawesome;
+    display: inline-block;
+    width: 100px; 
+    height: 100px; 
+    margin: 0 20px; 
+    padding-top: 14px; 
+    position: relative; 
+    -o-transition: all .5s;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    transition: all .5s;
+}
+
+#contact a:hover {
+    background-color: #003554; 
+}
+
+#contact a span {
+    color: #666;
+    position: absolute;
+    bottom: -30px; 
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1; 
+    font-size: 14px;
+    font-family: sans-serif;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s linear;
+}
+
+#contact a:hover span {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+.icon-1 {
+    content: '\f09a';
+    background-image: url("data/icons/linkedin_icon.png"); 
+}
+
+.icon-2 {
+    content: '\f099';
+    background-image: url("data/icons/github_icon.png"); 
+}
+
+.icon-3 {
+    content: '\f0d5';
+    background-image: url("data/icons/mail_icon.png"); 
+}
+
+.icon-4 {
+    content: '\f113';
+    background-image: url("data/icons/htb_icon.png");
+}
+
+.icon-5 {
+    content: '\f17d';
+    background-image: url("data/icons/root_me_icon.png"); 
+}
+

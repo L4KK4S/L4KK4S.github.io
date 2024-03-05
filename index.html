@@ -29,7 +29,7 @@
 
         <div class="center-div">
             <div class="horizontal-div">
-                <img src="data/img/portrait.jpg" alt="erreur d'affichage" id="portrait-img">
+                <img src="data/img/portrait.png" alt="erreur d'affichage" id="portrait-img">
                 <div class="vertical-div">
 
                     <div id="about-me-skills" class="about-me-div">
@@ -81,27 +81,42 @@
                 <div class="slide"><a href="https://github.com/L4KK4S/Tetriminux"><img class="slider-img" src="data/img/Tetriminux_card.png" alt="Erreur image"></a></div>
                 <div class="slide"><a href="https://github.com/L4KK4S/AgenC"><img class="slider-img" src="data/img/AgenC_card.png" alt="Erreur image"></a></div>
                 <div class="slide"><a href="https://github.com/L4KK4S/Libet"><img class="slider-img" src="data/img/Libet_card.png" alt="Erreur image"></a></div>
-                <div class="slide"><a href=""><img class="slider-img" src="" alt="Erreur image"></a></div>
-                <div class="slide"><a href=""><img class="slider-img" src="" alt="Erreur image"></a></div>
             </div>
             <button class="slider-btn" id="nextBtn" onclick="nextSlide()">></button>
         </div>
 
     </section>
 
+    <!-- Quatrième Section : Contacts -->
+    <section id="contact">
+
+        <div>
+            <a href="https://www.linkedin.com/in/abdel-waheb-sakkal/" class="icon-1"><span>LinkedIn</span></a>
+            <a href="https://www.linkedin.com/in/abdel-waheb-sakkal/" class="icon-2"><span>Github</span></a>
+            <a href="#" id="copyLink" class="icon-3"><span>Mail</span></a>
+            <a href="https://app.hackthebox.com/profile/1628055" class="icon-4"><span>HackTheBox</span></a>
+            <a href="https://www.root-me.org/Lakkas" class="icon-5"><span>Root-me</span></a>
+        </div>
+        
+    </section>
+
+
     <!-- Barre de navigation -->
     <nav>
         <ul>
             <li><a href="#about-me">À propos</a></li>
             <li><a href="#projects">Projets</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
 
     <script>
+
+        // variables pou recupérer les clicks et set l'index
         const slider = document.getElementById('image-slider');
         let currentIndex = 0;
 
+        // fonction pour afficher le slide
         function showSlide(index) {
             const slideWidth = document.querySelector('.slide').offsetWidth;
             const newPosition = -index * slideWidth;
@@ -109,15 +124,43 @@
             currentIndex = index;
         }
 
+        // fonction pour passer au slide suivant
         function nextSlide() {
             currentIndex = (currentIndex + 1) % document.querySelectorAll('.slide').length;
             showSlide(currentIndex);
         }
 
+        // fonction pour passer au slide précédent
         function prevSlide() {
             currentIndex = (currentIndex - 1 + document.querySelectorAll('.slide').length) % document.querySelectorAll('.slide').length;
             showSlide(currentIndex);
         }
+
+        // récupération du click sur le bouton mail
+        document.getElementById("copyLink").addEventListener("click", function(event) {
+        event.preventDefault(); 
+
+        // variable pour le texte à copier
+        var textToCopy = "abdel-waheb.sakkal@efrei.net";
+        var tempTextArea = document.createElement("textarea");
+        tempTextArea.value = textToCopy;
+
+        // ajouter l'élément textarea temporaire à la page pour pouvoir le sélectionner
+        document.body.appendChild(tempTextArea);
+
+        // sélectionner le texte dans l'élément textarea
+        tempTextArea.select();
+
+        // copier le texte sélectionné dans le presse-papiers
+        document.execCommand("copy");
+
+        // supprimer l'élément textarea temporaire
+        document.body.removeChild(tempTextArea);
+
+        // afficher un messzge pour confirmer que le texte a été copié
+        alert("Mail copié dans le presse-papiers !");
+        });
+
     </script>
 
 </body>
